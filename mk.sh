@@ -1,11 +1,11 @@
 start_time=`date +%s`
 MYOUT=test_out
 kernel_out=$MYOUT/KERNEL_OBJ
-if [ ! -f $MYOUT ] 
+if [ ! -d $MYOUT ] 
 then
 	mkdir $MYOUT
 fi
-if [ ! -f $kernel_out ] 
+if [ ! -d $kernel_out ] 
 then
 	mkdir $kernel_out
 fi
