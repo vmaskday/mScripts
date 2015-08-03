@@ -1,13 +1,9 @@
 start_time=`date +%s`
 MYOUT=test_out
 kernel_out=$MYOUT/KERNEL_OBJ
-if [ ! -d $MYOUT ] 
-then
-	mkdir $MYOUT
-fi
 if [ ! -d $kernel_out ] 
 then
-	mkdir $kernel_out
+	mkdir -p $kernel_out
 fi
 make O=$MYOUT/KERNEL_OBJ ARCH=arm64 CROSS_COMPILE=aarch64-linux-android- mirageplus01a_msm_defconfig
 make O=$MYOUT/KERNEL_OBJ ARCH=arm64 CROSS_COMPILE=aarch64-linux-android- -j8
