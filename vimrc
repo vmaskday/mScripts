@@ -8,6 +8,16 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 "" 2. sudo apt-get install build-essential cmake python-dev
 "" 3. cd ~/.vim/bundle/YouCompleteMe/
 "" 4. ./install.sh --clang-completer
+
+""config for YouCompleteMe
+
+""turns off Syntastic
+let g:ycm_show_diagnostics_ui = 0
+"" turn on keyword complete
+let g:ycm_seed_identifiers_with_syntax=1
+""set default config file
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 " set the runtime path to include Vundle and initialize

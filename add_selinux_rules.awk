@@ -1,13 +1,11 @@
 #author mask.yang
 #version 2.0
 {
-	
-	
 	if ( match($0,/denied/) > 0) {
 		if ( match($0,/scontext/) > 0 ) {
 			start = match($0,/{/)
 			end = match($0,/}/)
-			pres = substr($0,start,end - start + 1)
+			permissive = substr($0,start,end - start + 1)
 			for (i = 1 ;i < NF ; i++ ){
 				if ( match($i,/^scontext*/) > 0 ) {
 					split($i,sc,":")
@@ -19,7 +17,7 @@
 					split($i,tcl,"=")
 				}
 			}
-			print "allow "sc[3]" "tc[3]":"tcl[2]" "pres ";"
+			print "allow "sc[3]" "tc[3]":"tcl[2]" "permissive ";"
 		}
 	}
 }
