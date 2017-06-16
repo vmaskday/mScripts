@@ -12,7 +12,7 @@ show_tree() {
 	do
 		echo -e "	\c"
 	done
-	echo $root_file
+	echo `basename $root_file`
 	local file
 	for file in $files
 	do
