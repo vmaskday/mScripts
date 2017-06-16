@@ -33,6 +33,10 @@ function send_one()
 				filename="recovery.img"
 				partition="recovery"
 				;;
+			user)
+				filename="userdata.img"
+				partition="userdata"
+				;;
 			*)
 				filename="boot.img"
 				partition="boot"
