@@ -10,6 +10,8 @@ map <F4>  @q
 nmap <S-t> @w <CR>
 nmap <S-p> @q <CR>
 
+" 格式化json文件
+map <C-j> :%!python3 -m json.tool <cr>
 nmap <F5> :cs find c <C-R>=expand("<cword>")<CR><CR>
 nmap <F6> :cs find g <C-R>=expand("<cword>")<CR><CR>
 nmap <F7> :cs find s <C-R>=expand("<cword>")<CR><CR>
