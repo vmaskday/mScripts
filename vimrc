@@ -31,3 +31,4 @@ endif
 ""	:!ctags-exuberant -R
 ""endif
 set tags=./tags
+nmap <S-l> :vertical resize -1<CR>
