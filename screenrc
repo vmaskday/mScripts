@@ -1,0 +1,18 @@
+#保存在home下.screenrc
+
+# 屏幕缓冲区4096行
+defscrollback 4096
+
+# 下标签设置
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %{..Y} %m/%d %C%a"
+termcapinfo rxvt 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+termcapinfo xterm ti@:te@
+termcapinfo xterm 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+
+#关闭闪屏
+vbell off
+
+#关闭screen的startup message
+startup_message off
